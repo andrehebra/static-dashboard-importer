@@ -106,7 +106,7 @@ const load = async () => {
         let q = 0;
 
         while (data.data.bookings.pageInfo.hasNextPage == true) {
-            await new Promise(resolve => setTimeout(resolve, 500));
+            await new Promise(resolve => setTimeout(resolve, 2000));
             console.log(q);
             q++;
             const variables = {
@@ -209,6 +209,7 @@ const load = async () => {
         }
         */
 
+        await new Promise(resolve => setTimeout(resolve, 2000));
         writeObjectToJsonFile(userArray, "data.json")
 
         for (let i = 0; i < userArray.length; i++) {
@@ -218,7 +219,10 @@ const load = async () => {
             })
         }
 
+        await new Promise(resolve => setTimeout(resolve, 2000));
         writeObjectToJsonFile(end, "dataInformation.json");
+
+        await new Promise(resolve => setTimeout(resolve, 2000));
         writeObjectToJsonFile(nameIdList, "nameIdList.json");
         console.log(end)
 
