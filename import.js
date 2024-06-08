@@ -47,6 +47,17 @@ const query = `query Query($all: Boolean, $to: DateTime, $after: String) {
               lastName
               id
             }
+            userProgram {
+                audit {
+                    createdAt
+                    createdById
+                    updatedAt
+                    updatedById
+                }
+                id
+                name
+                status
+            }
             submittedByInstructorAt
             totalSeconds
             vfrDualSeconds
