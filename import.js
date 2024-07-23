@@ -46,6 +46,7 @@ const query = `query Query($all: Boolean, $to: DateTime, $after: String) {
               firstName
               lastName
               id
+              callSign
             }
             userProgram {
                 audit {
